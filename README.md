@@ -35,5 +35,7 @@ The prod environment has a simple haproxy before the three nginx docker and two 
 
 For log, whether it is a public cloud or private cloud. I think we can use ELF or EFK to collect and view.   
   
-For monitoring, a good choice for cloud-native product is to deploy Prometheus. Both tools mentioned above can be easily deploy. If we use k8s, we can use helm to deploy.
+For monitoring, a good choice for cloud-native product is to deploy Prometheus. Both tools mentioned above can be easily deploy. If we use k8s, we can use helm to deploy.  
+
+for HA, we can deploy keepalived before some haproxy, this can avoid some single node fail.  
 
