@@ -1,0 +1,12 @@
+version: '3'
+services:
+  web:
+    image: maodahua16/dev_web:<ver>
+    ports:
+      - 80:80
+  app:
+    image: maodahua16/dev_app:<ver>
+    ports:
+      - 8080:8080
+    volumes:
+      - ./appdata:/Prevayler

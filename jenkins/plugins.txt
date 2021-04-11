@@ -1,0 +1,10 @@
+git 
+git-parameter
+github
+workflow-aggregator
+github-branch-source
+pipeline-stage-view
+pipeline-github-lib
+pipeline-maven
+credentials-binding
+docker-commons

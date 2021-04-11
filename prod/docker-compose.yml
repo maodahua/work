@@ -1,0 +1,38 @@
+version: '3'
+services:
+  web1:
+    image: maodahua16/prod_web:<ver>
+    ports:
+      - 80
+  web2:
+    image: maodahua16/prod_web:<ver>
+    ports:
+      - 80
+  web3:
+    image: maodahua16/prod_web:<ver>
+    ports:
+      - 80
+  app1:
+    image: maodahua16/prod_app:<ver>
+    ports:
+      - 8080
+    volumes:
+      - ./appdata:/Prevayler
+  app2:
+    image: maodahua16/prod_app:<ver>
+    ports:
+      - 8080
+    volumes:
+      - ./appdata:/Prevayler
+  proxy:
+    image: haproxy:work
+    ports:
+      - 80:80
+      - 88:88
+      - 8080:8080
+    depends_on:
+      - "web1"
+      - "web2"
+      - "web3"
+      - "app1"
+      - "app2"
